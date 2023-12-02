@@ -1,0 +1,8 @@
+<div>
+  <ng-container *ngIf="!loggedIn; else dashboard">
+    <app-login (login)="onLogin($event)"></app-login>
+  </ng-container>
+  <ng-template #dashboard>
+    <app-table (logout)="onLogout()"></app-table>
+  </ng-template>
+</div>
